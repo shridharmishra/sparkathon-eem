@@ -21,7 +21,7 @@ public class AWSS3ClientBuilder {
      */
     public static AmazonS3 buildS3Client() {
         AmazonS3 s3Client;
-        String awsRegion = null;
+        String awsRegion = "us-east-1";
         BasicAWSCredentials awsCreds = new BasicAWSCredentials("XXXXXXXXXXXXXXXXXXXX", "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
 
         s3Client = AmazonS3ClientBuilder
