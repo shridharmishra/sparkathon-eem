@@ -9,6 +9,9 @@ import com.amazonaws.services.s3.AmazonS3ClientBuilder;
 public class AWSS3ClientBuilder {
 
 
+    public static final String ACCESS_KEY = "XXXXXXXXXXXXXXXXXXXX";
+    public static final String SECRET_KEY = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+
     public static void main(String[] args) {
         buildS3Client();
     }
@@ -22,7 +25,7 @@ public class AWSS3ClientBuilder {
     public static AmazonS3 buildS3Client() {
         AmazonS3 s3Client;
         String awsRegion = "us-east-1";
-        BasicAWSCredentials awsCreds = new BasicAWSCredentials("XXXXXXXXXXXXXXXXXXXX", "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
+        BasicAWSCredentials awsCreds = new BasicAWSCredentials(ACCESS_KEY, SECRET_KEY);
 
         s3Client = AmazonS3ClientBuilder
                 .standard()
